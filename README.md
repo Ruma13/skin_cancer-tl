@@ -1,11 +1,11 @@
-# Early Detection of Skin cancer using ResNet50 model+ Transfer learning+ custom cnn layers
-Project Overview
+# Early Detection of Skin cancer using DenseNet121 model+Fusion+CBAM+ Transfer learning+ custom cnn layers
+#Project Overview
 
 This project focuses on the early detection of skin cancer using deep learning techniques. It leverages DenseNet121 with CBAM (Convolutional Block Attention Module), model fusion, pre-pooling features, and early stopping strategies to improve diagnostic accuracy. Multiple architectures were trained and evaluated to ensure robustness and high reliability in real-world medical diagnosis.
 
 The goal is to provide an automated pipeline for detecting and classifying skin lesions, supporting dermatologists in early detection and reducing misdiagnosis.
 
-Features
+#Features
 
 Training of DenseNet121 + CBAM for feature extraction and classification.
 
@@ -21,7 +21,7 @@ Calculation of train/validation/test metrics, including accuracy, loss, and AUC.
 
 Visualization of training curves, confusion matrices, and Grad-CAM++ heatmaps for model explainability.
 
-Dataset
+#Dataset
 
 This project uses the HAM10000 dataset, which contains images of various skin lesion types, including melanoma, nevus, and benign keratosis.
 
@@ -39,7 +39,7 @@ dataset/
     ├── nevus/
     └── ...
 
-Installation
+#Installation
 
 Clone this repository:
 
@@ -52,7 +52,7 @@ Install the required Python packages (tested on Python 3.10+):
 pip install -r requirements.txt
 
 
-Recommended packages include:
+#Recommended packages include:
 
 torch, torchvision
 
@@ -64,7 +64,7 @@ matplotlib, seaborn
 
 scikit-learn
 
-Usage
+#Usage
 1. Prepare the Dataset
 
 Organize images in train and test folders.
@@ -87,7 +87,7 @@ Evaluate individual models or fused models:
 python evaluate_models.py --model_path "saved_models/densenet_cbam_fusion.pth"
 
 
-Outputs include:
+#Outputs include:
 
 Accuracy and loss plots
 
@@ -101,7 +101,7 @@ python grad_cam_plus.py --model_path "saved_models/densenet_cbam_fusion.pth" --i
 
 Generates heatmaps showing regions influencing model decisions.
 
-Experiments & Results
+#Experiments & Results
 Model	Accuracy	Validation Loss	AUC
 ResNet50	0.92	0.21	0.95
 VGG16	0.90	0.25	0.93
